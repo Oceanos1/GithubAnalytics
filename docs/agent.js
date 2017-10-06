@@ -1,5 +1,6 @@
 const request = require("superagent");
-const configFile = require("./auth.json");
+const configFile = require("../auth.json");
+const chait = require("chai");
 
 const owner = "lognaume";
 const repo = "HEIGVD-PRO-Project";
@@ -16,7 +17,7 @@ describe("the Github API", ()=>{
             .get(url)
             .auth(username, token)
             .set("Accept", "application/vnd.github.v3+json")
-            .end(err, res) => {
+            .end((err, res) => {
                 should.not.exist(err);
                 should.exist(res);
                 done();
