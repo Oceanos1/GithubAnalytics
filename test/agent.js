@@ -1,25 +1,19 @@
-const request = require('superagent');
-const { username, token } = require('../auth.json');
 const chai = require('chai');
-const fs = require('fs');
+const credentials = require('../auth.json');
+const Agent = require('../src/agent.js');
 
 const owner = 'lognaume';
 const repo = 'HEIGVD-PRO-Project';
-const url = `https://api.github.com/repos/${owner}/${repo}`;
 
 const should = chai.should();
 
-describe('the Github API', () => {
-  it('allows me to get a list of pull requests', (done) => {
-    request
-      .get(url)
-      .auth(username, token)
-      .set('Accept', 'application/vnd.github.v3+json')
-      .end((err, res) => {
-        should.not.exist(err);
-        should.exist(res);
-        fs.writeFileSync('./response.json', JSON.stringify(res, null, 2));
-        done();
-      });
+describe('agent', () => {
+  it('should fetch pull requests', (done) => {
+    const agent = new Agent(credentials);
+      agent.fetchAndProcessAllPullRequests(owner, repo, (err, pullRequests) => {
+      should.not.exist(err);
+      pullRequests.should.be.an('array');
+      done();
+    });
   });
 });
