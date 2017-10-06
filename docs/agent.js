@@ -1,6 +1,7 @@
 const request = require("superagent");
 const configFile = require("../auth.json");
-const chait = require("chai");
+const chai = require("chai");
+const mocha = require("mocha");
 
 const owner = "lognaume";
 const repo = "HEIGVD-PRO-Project";
