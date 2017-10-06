@@ -7,10 +7,9 @@ class Agent {
   }
 
   fetchAndProcessAllPullRequests(owner, repo, allPullRequestsAreAvailable) {
-    const targetUrl = `https://api.github.com/repos/${owner}/${repo}`;
+    const targetUrl = `https://api.github.com/repos/${owner}/${repo}/pulls?state=all`;
     let pullRequests = [];
     function fetchAndProcessPage(pageUrl, credentials) {
-      console.log('Fetching $(pageUrl)');
       request
         .get(pageUrl)
         .auth(credentials.username, credentials.token)
@@ -27,4 +26,5 @@ class Agent {
   }
 }
 
+// To have the constructor
 module.exports = Agent;

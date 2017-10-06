@@ -10,7 +10,7 @@ const should = chai.should();
 describe('agent', () => {
   it('should fetch pull requests', (done) => {
     const agent = new Agent(credentials);
-      agent.fetchAndProcessAllPullRequests(owner, repo, (err, pullRequests) => {
+    agent.fetchAndProcessAllPullRequests(owner, repo, (err, pullRequests) => {
       should.not.exist(err);
       pullRequests.should.be.an('array');
       done();
