@@ -1,10 +1,11 @@
 const request = require('superagent');
 const configFile = require('../auth.json');
 const chai = require('chai');
+const fs = require("fs");
 
 const owner = 'lognaume';
 const repo = 'HEIGVD-PRO-Project';
-const url = 'https://api.github.com/repos/${owner}/${repo}';
+const url = `https://api.github.com/repos/${owner}/${repo}`;
 const token = configFile.token;
 const username = configFile.username;
 console.log(token);
@@ -20,7 +21,9 @@ describe('the Github API', () => {
       .end((err, res) => {
         should.not.exist(err);
         should.exist(res);
+        fs.writeFileSync('./response.json', JSON.stringify(res, null, 2));
         done();
+
       });
   });
 });
