@@ -17,7 +17,7 @@
     "superagent": "^3.6.3",
     "mocha": "^4.0.1"
   },
-  "main": "app.js",
+  "main": "agent.js",
   "directories": {
     "test": "test"
   },
