@@ -10,21 +10,21 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "chai": "^4.1.2",
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "superagent": "^3.6.3"
   },
   "main": "app.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
     "eslint": "^4.7.2",
     "eslint-config-airbnb-base": "^12.0.1",
     "eslint-plugin-import": "^2.7.0",
-    "mocha": "^4.0.1",
-    "superagent": "^3.6.3"
+    "mocha": "^4.0.1"
   },
   "author": "",
   "license": "ISC",
