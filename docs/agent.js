@@ -1,26 +1,25 @@
-var request = require("request");
-var configFile = require("./auth.json");
+const request = require("superagent");
+const configFile = require("./auth.json");
 
-owner = "lognaume";
-repo = "HEIGVD-PRO-Project";
-token = configFile.token;
+const owner = "lognaume";
+const repo = "HEIGVD-PRO-Project";
+const url = "https://api.github.com/repos/${owner}/${repo}";
+const token = configFile.token;
+const username = configFile.username;
 console.log(token);
-var githubUrl = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls";
 
-var headers = {
-    "Accept": "application/vnd.github.v3+json"
-}
+const should = chai.should();
 
-var options = {
-    url: githubUrl,
-    method: "GET",
-    headers: headers,
-}
-
-
-request.get(options, function (error, response, body){
-    if(!error){
-        console.log("Response code:");
-        console.log(response.statusCode);
-    }
-})
+describe("the Github API", ()=>{
+    it("allows me to get a list of pull requests", (done) => {
+        request
+            .get(url)
+            .auth(username, token)
+            .set("Accept", "application/vnd.github.v3+json")
+            .end(err, res) => {
+                should.not.exist(err);
+                should.exist(res);
+                done();
+            });
+    });
+});
