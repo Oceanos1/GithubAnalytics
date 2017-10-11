@@ -1,12 +1,12 @@
 const Storage = require('../src/storage');
-const { username, token } = require('../auth.json');
+const { token } = require('../auth.json');
 const should = require('chai').should();
 
 describe('Storage', () => {
   it('should allow me to store a file on GitHub', (done) => {
     const repo = 'GithubAnalytics_Client';
-    // const username = 'SoftEng-HEIGVD';
-    const storage = new Storage(username, token, repo);
+    const owner = 'edwardransome';
+    const storage = new Storage(owner, token, repo);
     const content = {
       random: Math.random(),
     };
