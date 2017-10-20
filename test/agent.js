@@ -2,6 +2,10 @@ const chai = require('chai');
 const credentials = require('../auth.json');
 const Agent = require('../src/agent.js');
 
+const owner2 = 'angular';
+const repo2 = 'angularjs';
+
+
 const owner = 'lognaume';
 const repo = 'HEIGVD-PRO-Project';
 
