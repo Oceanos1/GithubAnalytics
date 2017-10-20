@@ -10,6 +10,11 @@ const storage = new Storage(owner, credentials.token, repo);
 
 const agent = new Agent(credentials);
 
+/*
+agent.fetchAndProcessAllPullRequests(owner, repo, (err, pullRequests) => {
+  console.log(pullRequests.body);
+});
+*/
 
 agent.fetchAndProcessAllPullRequests(owner, repo, pullRequests);
 
@@ -24,4 +29,4 @@ const content = {
 
 console.log(content);
 
-// storage.publish('json/my-data-file.json', JSON.stringify(content), 'new version of data');
+// storage.publish('json/my-owner_repo.json', JSON.stringify(content), 'new version of data');

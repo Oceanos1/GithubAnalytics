@@ -23,7 +23,6 @@ class Agent {
         });
     }
     fetchAndProcessPage(targetUrl, this.credentials);
-    return pullRequests;
   }
 }
 
