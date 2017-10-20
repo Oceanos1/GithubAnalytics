@@ -4,13 +4,8 @@ const should = require('chai').should();
 
 describe('Storage', () => {
   it('should allow me to store a file on GitHub', (done) => {
-    /*
-    const repo = 'GithubAnalytics_Client';
-    const owner = 'edwardransome';
-    */
-
     const owner = 'angular';
-    const repo = 'angularjs';
+    const repo = 'angular.js';
 
     const storage = new Storage(owner, token, repo);
     const content = {

@@ -3,9 +3,7 @@ const credentials = require('../auth.json');
 const Agent = require('../src/agent.js');
 
 const owner = 'angular';
-const repo = 'angularjs';
-
-
+const repo = 'angular.js';
 
 const should = chai.should();
 
