@@ -11,6 +11,7 @@ if(process.env.USERNAME && process.env.TOKEN) {
 else { 
   credentials = require('../auth.json');
 }
+console.log(credentials);
 
 // the repo to analyse
 const ownerToAnalyse = 'angular';
