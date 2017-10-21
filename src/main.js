@@ -1,6 +1,16 @@
-const credentials = require('../auth.json');
 const Agent = require('../src/agent.js');
 const Storage = require('../src/storage.js');
+var credentials;
+
+if(process.env.USERNAME && process.env.TOKEN) { 
+  credentials = {
+    username: process.env.USERNAME,
+    token: process.env.TOKEN
+  };
+}
+else { 
+  credentials = require('../auth.json');
+}
 
 // the repo to analyse
 const ownerToAnalyse = 'angular';
