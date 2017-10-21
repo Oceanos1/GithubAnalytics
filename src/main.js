@@ -42,6 +42,7 @@ agent.fetchAndProcessAllPullRequests(ownerToAnalyse, repoToAnalyse, (err, pullRe
     });
   }
 
-  storage.publish('docs/json/angular_angular.js.json', JSON.stringify(content), 'new version of data');
+  storage.publish('docs/json/angular_angular.js.json', JSON.stringify(content), 'new version of data', () => {
+  });
   console.log('done');
 });
