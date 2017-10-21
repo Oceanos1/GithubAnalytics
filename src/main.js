@@ -26,12 +26,11 @@ agent.fetchAndProcessAllPullRequests(ownerToAnalyse, repoToAnalyse, (err, pullRe
     const pullRequest = pullRequests[i];
 
     // to calculate the duration of an PR
-    const dateEnd = pullRequest.state === 'closed' ?
+    const dateEnd = (pullRequest.state === 'closed' && pullRequest.merged_at != null) ?
       new Date(pullRequest.merged_at).getTime()
       : new Date(pullRequest.updated_at).getTime();
 
     const theDuration = Math.ceil((dateEnd - (new Date(pullRequest.created_at)).getTime()) / (oneDayInMilliSecond));
-    console.log(`duration ${theDuration}`);
 
     content.push({
       id: pullRequest.id,
