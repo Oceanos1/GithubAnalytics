@@ -1,32 +1,39 @@
 const credentials = require('../auth.json');
 const Agent = require('../src/agent.js');
-const Storage = require('../src/storage');
+const Storage = require('../src/storage.js');
 
 
-const owner = 'angular';
-const repo = 'angular.js';
-const storage = new Storage(owner, credentials.token, repo);
+const ownerToAnalyse = 'angular';
+const repoToAnalyse = 'angular.js';
+
+
+// const ownerToAnalyse = 'lognaume';
+// const repoToAnalyse = 'HEIGVD-PRO-Project';
+
+const ownerToPush = 'edwardransome';
+const repotoPush = 'GithubAnalytics_Client';
+
+const storage = new Storage(ownerToPush, credentials.token, repotoPush);
 
 
 const agent = new Agent(credentials);
-
-/*
-agent.fetchAndProcessAllPullRequests(owner, repo, (err, pullRequests) => {
-  console.log(pullRequests.body);
-});
-*/
-
-agent.fetchAndProcessAllPullRequests(owner, repo, pullRequests);
-
 const content = {
-  id: pullRequests.body.id,
-  title: pullRequests.body.title,
-  created_at: pullRequests.body.created_at,
-  updated_at: pullRequests.body.updated_at,
-  merged_at: pullRequests.body.merged_at,
-  state: pullRequests.body.state,
+  allPullRequests: [],
 };
 
-console.log(content);
+agent.fetchAndProcessAllPullRequests(ownerToAnalyse, repoToAnalyse, (err, pullRequests) => {
+  for (const i in pullRequests) {
+    const pullRequest = pullRequests[i];
 
-// storage.publish('json/my-owner_repo.json', JSON.stringify(content), 'new version of data');
+    content.allPullRequests.push({
+      id: pullRequest.id,
+      title: pullRequest.title,
+      created_at: pullRequest.created_at,
+      updated_at: pullRequest.updated_at,
+      merged_at: pullRequest.merged_at,
+      state: pullRequest.state,
+    });
+  }
+
+  storage.publish('json/my-owner_repo.json', JSON.stringify(content), 'new version of data');
+});
