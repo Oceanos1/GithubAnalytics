@@ -30,7 +30,7 @@ agent.fetchAndProcessAllPullRequests(ownerToAnalyse, repoToAnalyse, (err, pullRe
       new Date(pullRequest.merged_at).getTime()
       : new Date(pullRequest.updated_at).getTime();
 
-    theDuration = Math.ceil((dateEnd - (new Date(pullRequest.created_at)).getTime()) / (oneDayInMilliSecond));
+    const theDuration = Math.ceil((dateEnd - (new Date(pullRequest.created_at)).getTime()) / (oneDayInMilliSecond));
     console.log(`duration ${theDuration}`);
 
     content.push({
