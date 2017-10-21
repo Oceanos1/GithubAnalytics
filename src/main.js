@@ -6,7 +6,7 @@ if(process.env.USERNAME && process.env.TOKEN) {
   credentials = {
     username: process.env.USERNAME,
     token: process.env.TOKEN
-  }
+  };
 }
 else { 
   credentials = require('../auth.json');
