@@ -11,7 +11,6 @@ if(process.env.USERNAME && process.env.TOKEN) {
 else { 
   credentials = require('../auth.json');
 }
-console.log(credentials);
 
 // the repo to analyse
 const ownerToAnalyse = 'angular';
@@ -50,6 +49,6 @@ agent.fetchAndProcessAllPullRequests(ownerToAnalyse, repoToAnalyse, (err, pullRe
     });
   });
 
-  storage.publish('docs/json/angular_angular.js.json', JSON.stringify(content), 'new version of data', () => {
+  storage.publish('docs/json/angular_angularTEST.js.json', JSON.stringify(content), 'new version of data', () => {
   });
 });
