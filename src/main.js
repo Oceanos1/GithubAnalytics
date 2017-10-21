@@ -3,12 +3,12 @@ const Agent = require('../src/agent.js');
 const Storage = require('../src/storage.js');
 
 
-// const ownerToAnalyse = 'angular';
-// const repoToAnalyse = 'angular.js';
+const ownerToAnalyse = 'angular';
+const repoToAnalyse = 'angular.js';
 
 
-const ownerToAnalyse = 'lognaume';
-const repoToAnalyse = 'HEIGVD-PRO-Project';
+// const ownerToAnalyse = 'lognaume';
+// const repoToAnalyse = 'HEIGVD-PRO-Project';
 
 const ownerToPush = 'edwardransome';
 const repotoPush = 'GithubAnalytics_Client';
@@ -24,7 +24,6 @@ agent.fetchAndProcessAllPullRequests(ownerToAnalyse, repoToAnalyse, (err, pullRe
 
   for (const i in pullRequests) {
     const pullRequest = pullRequests[i];
-
     // to calculate the duration of an PR
     const dateEnd = (pullRequest.state === 'closed' && pullRequest.merged_at != null) ?
       new Date(pullRequest.merged_at).getTime()
