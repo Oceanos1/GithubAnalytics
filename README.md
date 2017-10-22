@@ -4,11 +4,10 @@ Ceci est le repositoire principal du projet Github Analytics, effectué dans le 
 
 Notre projet consiste à analyser les pull requests du repository angular/angular.js et d'afficher certaines informations importantes le concernant.
 
-La première analyse est de regarder grâce à un graphe la durée pendant laquelle les pull requests sont restés ouverte.
+La première analyse est de regarder grâce à un graphe la durée pendant laquelle les pull requests sont restés ouverte. Ce graphe permet de voir combien de temps durent la plupart des pull request. On calcule aussi le temps moyen avant qu'une pull request soit fermée.
 
-**//AWDOANDOINAWODINAWD ON AFFICHERA AUSSI LE TEMPS MOYEN DES PULL REQUESTS OUVERTES**
 
-La dernière analyse consiste à identifier les pull requests ouverte depuis un certain temps afin de les prioriser. C'est pourquoi nous avons implémenté un affichage des dix plus longues pull requests ouvertes.
+La dernière analyse consiste à identifier les pull requests ouverte depuis un certain temps afin de les prioriser. C'est pourquoi nous avons implémenté un affichage des dix pull request ouvertes le plus longtemps.
 
 ## Structure du projet
 
