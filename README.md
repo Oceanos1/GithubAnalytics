@@ -6,6 +6,7 @@ Notre projet consiste à analyser les pull requests du repository angular/angula
 
 La première analyse est de regarder grâce à un graphe la durée pendant laquelle les pull requests sont restés ouverte. Ce graphe permet de voir combien de temps durent la plupart des pull request. On calcule aussi le temps moyen avant qu'une pull request soit fermée.
 
+
 La dernière analyse consiste à identifier les pull requests ouverte depuis un certain temps afin de les prioriser. C'est pourquoi nous avons implémenté un affichage des dix pull request ouvertes le plus longtemps.
 
 ## Structure du projet
@@ -15,7 +16,9 @@ Pour ce projet, nous avons crée deux repositories:
 Pour la partie client :
 https://github.com/edwardransome/GithubAnalytics_Client
 
-Concernant la partie client, **BLABLABLA ECRIT ICI EDDIE**
+Le dossier `/docs/` contient les fichiers nécessaires à l'affichage de la page web par Github Pages. Le fichier `index.html` est l'unique page web utilisée. Le thème du site à été pris de [Startbootstrap](https://startbootstrap.com/template-overviews/grayscale/). Le fichier javascript effectuant l'affichage du graphe avec [Chart.js](http://www.chartjs.org/) est le fichier `/js/analytics.js`. Les autres fichiers sont issus du thème Bootstrap.
+
+Les données utilisées sont stockées dans le fichier `/json/angular_angular.js.json`. 
 
 et pour la partie agent:
 https://github.com/Oceanos1/GithubAnalytics/
@@ -34,25 +37,61 @@ Cette classe est aussi largement inspirée des webcasts. Elle permet de push du 
 
 **BLABLABLA PARLER DES VARIABLES D'ENVIRONNEMENTS**
 
-Heroku fait appelle à cette classe tous les jours à minuit (il la reveille en faisant un node main.js). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le Git.
+Heroku fait un appelle à cette classe tous les jours
+### Prerequisites
 
-On notera que au jour d'aujourd'hui, il y a actuellement 7597 pullRequests sur angular/angular.js et par conséquent, mettre à jour le Git met un certain temps. Cependant, ce n'est pas très important pour un utilisateur lambda car il a accès aux anciennes informations pendant la mise à jour.
+What things you need to install the software and how to install them
 
-### Lancement
+```
+Give examples
+```
 
+### Installing
 
+A step by step series of examples that tell you have to get a development env running
 
-### Linter
+Say what the step will be
 
-Nous avons utilisé ESLint pour avoir un code propre. Le code sur le repo de l'agent ne contient pas d'erreur de linter. Cependant, sur le repo du client, comme celui-ci dépend de l'html, il y a certaines erreur que l'on ne peut éviter. Par exemple, ```document``` ne sera pas défini alors qu'il l'est lorsque le script est lancé.
+```
+Give the example
+```
 
+And repeat
 
-## Déploiement
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
 
 https://edwardransome.github.io/GithubAnalytics_Client/
 
 
-## Auteurs
+## Authors
 
 * **Edward Ransome** 
 * **Michael Spierer**
