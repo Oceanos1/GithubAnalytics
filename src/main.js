@@ -1,11 +1,12 @@
 const Agent = require('../src/agent.js');
 const Storage = require('../src/storage.js');
-var credentials;
+
+let credentials;
 
 if(process.env.USERNAME && process.env.TOKEN) { 
   credentials = {
     username: process.env.USERNAME,
-    token: process.env.TOKEN
+    token: process.env.TOKEN,
   };
 }
 else { 
@@ -27,7 +28,6 @@ const content = [];
 
 agent.fetchAndProcessAllPullRequests(ownerToAnalyse, repoToAnalyse, (err, pullRequests) => {
   const oneDayInMilliSecond = 24 * 60 * 60 * 1000;
-
   Object.keys(pullRequests).forEach((key) => {
     const pullRequest = pullRequests[key];
     // calculation of the duration of an PR
