@@ -20,7 +20,7 @@ Concernant la partie client, **BLABLABLA ECRIT ICI EDDIE**
 et pour la partie agent:
 https://github.com/Oceanos1/GithubAnalytics/
 
-Dans cette partie, il y a trois classes javascripts:
+Dans cette partie, il y a trois classes Javascript:
 
 **agent.js**
 
@@ -28,13 +28,13 @@ Cette classe est largement inspirée des webcasts TWEB 2017. Elle utilise supera
 
 **storage.js**
 
-Cette classe est aussi largement inspirée des webcasts. Elle permet de push du contenu sur un repo git.
+Cette classe est aussi largement inspirée des webcasts. Elle permet de push du contenu sur un repo Git.
 
 **main.js**
 
 **BLABLABLA PARLER DES VARIABLES D'ENVIRONNEMENTS**
 
-Heroku fait appelle à cette classe tous les jours à minuit (il la reveille en faisant un node main.js). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le Git.
+Heroku fait appelle à cette classe tous les jours à 22h30 UCT (il la reveille en faisant un ```node main.js```). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le Git.
 
 On notera que au jour d'aujourd'hui, il y a actuellement 7597 pullRequests sur angular/angular.js et par conséquent, mettre à jour le Git met un certain temps. Cependant, ce n'est pas très important pour un utilisateur lambda car il a accès aux anciennes informations pendant la mise à jour.
 
