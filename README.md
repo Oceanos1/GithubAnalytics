@@ -35,26 +35,8 @@ Cette classe est aussi largement inspirée des webcasts. Elle permet de push du 
 
 **main.js**
 
-**BLABLABLA PARLER DES VARIABLES D'ENVIRONNEMENTS**
+Heroku fait appelle à cette classe tous les jours à 22h30 UCT (la tâche lancée est `/bin/launchAgent`). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le repository du client. Tous les jours, on remplace donc automatiquement les données utilisées par notre site par des données à jour.
 
-Heroku fait appelle à cette classe tous les jours à 22h30 UCT (il la reveille en faisant un ```node main.js```). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le Git.
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
