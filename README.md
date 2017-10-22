@@ -38,14 +38,14 @@ Cette classe est aussi largement inspirée des webcasts. Elle permet de push du 
 Heroku fait appelle à cette classe tous les jours à 22h30 UCT (la tâche lancée est `/bin/launchAgent`). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le repository du client. Tous les jours, on remplace donc automatiquement les données utilisées par notre site par des données à jour.
 
 
-## Deployment
+## Déploiement
 
-Add additional notes about how to deploy this on a live system
+Les analyses sont disponible sur :
 
 https://edwardransome.github.io/GithubAnalytics_Client/
 
 
-## Authors
+## Auteurs
 
 * **Edward Ransome** 
 * **Michael Spierer**
