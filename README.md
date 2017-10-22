@@ -6,7 +6,6 @@ Notre projet consiste à analyser les pull requests du repository angular/angula
 
 La première analyse est de regarder grâce à un graphe la durée pendant laquelle les pull requests sont restés ouverte. Ce graphe permet de voir combien de temps durent la plupart des pull request. On calcule aussi le temps moyen avant qu'une pull request soit fermée.
 
-
 La dernière analyse consiste à identifier les pull requests ouverte depuis un certain temps afin de les prioriser. C'est pourquoi nous avons implémenté un affichage des dix pull request ouvertes le plus longtemps.
 
 ## Structure du projet
@@ -35,9 +34,9 @@ Cette classe est aussi largement inspirée des webcasts. Elle permet de push du 
 
 **BLABLABLA PARLER DES VARIABLES D'ENVIRONNEMENTS**
 
-Heroku fait appelle à cette classe tous les jours à minuit (il la reveille en faisant un node main.js). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le git.
+Heroku fait appelle à cette classe tous les jours à minuit (il la reveille en faisant un node main.js). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le Git.
 
-On notera que au jour d'aujourd'hui, il y a actuellement 7597 pullRequests sur angular/angular.js et par conséquent, mettre à jour le git met un certain temps. Cependant, ce n'est pas très important pour un utilisateur lambda car il a accès aux anciennes informations pendant la mise à jour.
+On notera que au jour d'aujourd'hui, il y a actuellement 7597 pullRequests sur angular/angular.js et par conséquent, mettre à jour le Git met un certain temps. Cependant, ce n'est pas très important pour un utilisateur lambda car il a accès aux anciennes informations pendant la mise à jour.
 
 ### Lancement
 
@@ -53,7 +52,7 @@ Nous avons utilisé ESLint pour avoir un code propre. Le code sur le repo de l'a
 https://edwardransome.github.io/GithubAnalytics_Client/
 
 
-## Authors
+## Auteurs
 
 * **Edward Ransome** 
 * **Michael Spierer**
