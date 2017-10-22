@@ -13,14 +13,14 @@ La dernière analyse consiste à identifier les pull requests ouverte depuis un 
 
 Pour ce projet, nous avons crée deux repositories:
 
-Pour la partie client :
+### Partie client
 https://github.com/edwardransome/GithubAnalytics_Client
 
 Le dossier `/docs/` contient les fichiers nécessaires à l'affichage de la page web par Github Pages. Le fichier `index.html` est l'unique page web utilisée. Le thème du site à été pris de [Startbootstrap](https://startbootstrap.com/template-overviews/grayscale/). Le fichier javascript effectuant l'affichage du graphe avec [Chart.js](http://www.chartjs.org/) est le fichier `/js/analytics.js`. Les autres fichiers sont issus du thème Bootstrap.
 
 Les données utilisées sont stockées dans le fichier `/json/angular_angular.js.json`. 
 
-et pour la partie agent:
+### Partie agent
 https://github.com/Oceanos1/GithubAnalytics/
 
 Dans cette partie, il y a trois classes javascripts:
