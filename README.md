@@ -34,56 +34,20 @@ Cette classe est aussi largement inspirée des webcasts. Elle permet de push du 
 
 **BLABLABLA PARLER DES VARIABLES D'ENVIRONNEMENTS**
 
-Heroku fait un appelle à cette classe tous les jours
-### Prerequisites
+Heroku fait appelle à cette classe tous les jours à minuit (il la reveille en faisant un node main.js). Elle crée un tableau contenant les pullRequests formatés, c'est-à-dire gardant uniquement les informations pertinantes, et les push sur le git.
 
-What things you need to install the software and how to install them
+On notera que au jour d'aujourd'hui, il y a actuellement 7597 pullRequests sur angular/angular.js et par conséquent, mettre à jour le git met un certain temps. Cependant, ce n'est pas très important pour un utilisateur lambda car il a accès aux anciennes informations pendant la mise à jour.
 
-```
-Give examples
-```
+### Lancement
 
-### Installing
 
-A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
+### Linter
 
-```
-Give the example
-```
+Nous avons utilisé ESLint pour avoir un code propre. Le code sur le repo de l'agent ne contient pas d'erreur de linter. Cependant, sur le repo du client, comme celui-ci dépend de l'html, il y a certaines erreur que l'on ne peut éviter. Par exemple, ```document``` ne sera pas défini alors qu'il l'est lorsque le script est lancé.
 
-And repeat
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+## Déploiement
 
 https://edwardransome.github.io/GithubAnalytics_Client/
 
