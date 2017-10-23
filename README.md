@@ -40,10 +40,10 @@ Heroku fait appelle à cette classe tous les jours à 22h30 UCT (la tâche lanc�
 
 ## Déploiement
 
-Les analyses sont disponible sur :
-
+Le client est déployé avec Github pages à l'adresse suivant:
 https://edwardransome.github.io/GithubAnalytics_Client/
 
+L'agent est déployé sur Heroku et met à jour les données toutes les 24h.
 
 ## Auteurs
 
